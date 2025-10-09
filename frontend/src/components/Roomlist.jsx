@@ -13,7 +13,7 @@ function Roomlist() {
   return (
     <div>
       <h2>Szobák listája</h2>
-      <table>
+      <table className="striped-table">
         <thead>
           <tr>
             <th>Szoba neve</th>

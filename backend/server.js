@@ -28,6 +28,14 @@ app.get("/hettorpe", (req, res) => {
         return res.json(result);
     })
   });
+
+  app.get("/szobak", (req, res) => { 
+    const sql = "SELECT szobak.sznev FROM szobak";
+    dbPool.query(sql, (err, result) => {
+        if (err) return res.json(err);
+        return res.json(result);
+    })
+  });
   
   app.get("/kihasznaltsag", (req, res) => { 
     const sql = "SELECT szobak.sznev, foglalasok.vendeg, DATEDIFF(foglalasok.tav, foglalasok.erk) AS vendegejszakak FROM szobak INNER JOIN foglalasok ON szobak.szazon = foglalasok.fsorsz ORDER BY szobak.sznev"; 
