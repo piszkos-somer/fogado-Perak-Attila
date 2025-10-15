@@ -46,9 +46,6 @@ function BookingForm() {
 
               </Form.Select>
             </Form.Group>
-            <Button variant="primary" type="submit" disabled={!selectedRoom}>
-              Adatok
-            </Button>
           </Form>
         </Col>
         <Col md={6}>
